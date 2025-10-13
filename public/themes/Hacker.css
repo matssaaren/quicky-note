@@ -1,0 +1,186 @@
+/* 🧠 Programmer Dark Theme — Quicky Notes */
+
+html, body, #root {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+  font-family: "JetBrains Mono", "Fira Code", monospace;
+  background: #0d0d0d;
+  color: #e0e0e0;
+  box-sizing: border-box;
+}
+
+/* App title */
+span {
+  display: inline-block;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  color: #bdbdbd;
+  font-size: 1.1rem;
+  padding: 0.2rem 0.4rem;
+  user-select: none;
+}
+
+/* Layout */
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  gap: 2rem;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* 🗒️ Add Note Box */
+.input {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+  background: #161616;
+  border: 1px solid #262626;
+  border-radius: 0.6rem;
+  padding: 1.5rem;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+  transition: border 0.2s ease;
+}
+
+.input:focus-within {
+  border-color: #3a3a3a;
+}
+
+/* Inputs & Textarea */
+.input input,
+.input textarea {
+  background: #0f0f0f;
+  color: #f0f0f0;
+  border: 1px solid #252525;
+  border-radius: 0.4rem;
+  padding: 0.8rem;
+  font-family: inherit;
+  font-size: 0.95rem;
+  transition: border 0.2s ease, background 0.2s ease;
+}
+
+.input input:focus,
+.input textarea:focus {
+  outline: none;
+  border-color: #39d353; /* GitHub green accent */
+  background: #111;
+}
+
+.input input::placeholder,
+.input textarea::placeholder {
+  color: #666;
+}
+
+/* Bigger textarea for writing */
+.input textarea {
+  min-height: 140px;
+  resize: vertical;
+}
+
+/* Button — subtle programmer accent */
+.input button {
+  align-self: flex-end;
+  background: #39d353;
+  color: #0d0d0d;
+  border: none;
+  border-radius: 0.4rem;
+  padding: 0.7rem 1.4rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.input button:hover {
+  background: #2ea043;
+  transform: translateY(-1px);
+}
+
+/* 🧾 List */
+.list {
+  width: 100%;
+  background: #161616;
+  border: 1px solid #252525;
+  border-radius: 0.6rem;
+  padding: 1.2rem;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.5);
+}
+
+/* Table layout */
+.list table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.list th, .list td {
+  padding: 0.8rem;
+  border-bottom: 1px solid #222;
+  vertical-align: top;
+  color: #d0d0d0;
+  text-align: left;
+}
+
+/* Table headers */
+.list tr:first-child td {
+  font-weight: 600;
+  color: #888;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-bottom: 1px solid #333;
+}
+
+/* Hover line highlight */
+.list tr:not(:first-child):hover {
+  background: #111;
+  transition: background 0.2s ease;
+}
+
+/* Columns */
+.note-title {
+  color: #9ae17b;
+  font-weight: 600;
+  width: 20%;
+  word-break: break-word;
+}
+
+.note-description {
+  color: #ddd;
+  font-family: "Inter", sans-serif;
+  white-space: pre-wrap;
+}
+
+.note-date {
+  font-size: 0.85rem;
+  color: #666;
+  width: 20%;
+}
+
+/* Scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 10px;
+}
+
+/* 📱 Responsive tweaks */
+@media (max-width: 700px) {
+  .list table, .list tr, .list td {
+    display: block;
+  }
+
+  .list td {
+    padding: 0.6rem 0;
+    border-bottom: 1px solid #222;
+  }
+
+  .input button {
+    align-self: stretch;
+  }
+}

@@ -1,0 +1,164 @@
+/* 🌤️ Base Layout */
+html, body, #root {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+  font-family: 'Inter', 'Poppins', sans-serif;
+  background: linear-gradient(145deg, #0e1628, #1c2844 80%);
+  color: #e8f0ff;
+  box-sizing: border-box;
+}
+
+/* 🏷️ Title Bar */
+span {
+  font-size: 1.2rem;
+  color: #a5c9ff;
+  font-weight: 500;
+  text-shadow: 0 0 10px rgba(120, 170, 255, 0.3);
+}
+
+/* 🌙 Main Section */
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* 📝 Add Note Input */
+.input {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(16px);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
+  width: 100%;
+}
+
+.input input {
+  padding: 0.8rem 1rem;
+  border: none;
+  border-radius: 0.6rem;
+  font-size: 1rem;
+  background: rgba(255, 255, 255, 0.1);
+  color: #eaf1ff;
+  transition: background 0.2s ease;
+}
+
+.input input::placeholder,
+.input textarea::placeholder {
+  color: #9fb8da;
+}
+
+.input textarea {
+  min-height: 140px;
+  resize: vertical;
+  border: none;
+  border-radius: 0.6rem;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.1);
+  color: #eaf1ff;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.input input:focus,
+.input textarea:focus {
+  outline: none;
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 0 10px rgba(120, 160, 255, 0.4);
+}
+
+/* ✨ Add Button */
+.input button {
+  align-self: flex-end;
+  background: linear-gradient(90deg, #84a9ff, #9cc7ff);
+  color: #0c1220;
+  font-weight: 600;
+  border: none;
+  padding: 0.9rem 1.6rem;
+  border-radius: 0.6rem;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  box-shadow: 0 0 15px rgba(140, 180, 255, 0.3);
+}
+
+.input button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 25px rgba(140, 180, 255, 0.6);
+}
+
+/* 📋 Notes List */
+.list {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 1rem;
+  backdrop-filter: blur(16px);
+  padding: 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
+}
+
+.list table {
+  width: 100%;
+  border-collapse: collapse;
+  color: #dfe7ff;
+}
+
+.list td, .list th {
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  vertical-align: top;
+}
+
+.list tr:hover {
+  background: rgba(255, 255, 255, 0.07);
+  transition: background 0.3s ease;
+}
+
+/* 🧾 Column Colors */
+.note-title {
+  font-weight: 600;
+  color: #b5caff;
+}
+
+.note-description {
+  color: #e5edff;
+  white-space: pre-wrap;
+}
+
+.note-date {
+  font-size: 0.9rem;
+  color: #9fb7da;
+}
+
+/* 📱 Responsive Design */
+@media (max-width: 700px) {
+  .list table, .list tr, .list td, .list th {
+    display: block;
+  }
+
+  .list td {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 0.8rem 0;
+  }
+
+  .list tr {
+    margin-bottom: 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .input button {
+    align-self: stretch;
+  }
+}
+
