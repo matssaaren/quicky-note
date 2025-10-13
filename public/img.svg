@@ -1,8 +1,0 @@
-<svg width="64" height="64" xmlns="http://www.w3.org/2000/svg">
-
- <g>
-  <title>Layer 1</title>
-  <path id="svg_1" d="m3.25679,8.07121c0,-2.40785 2.05074,-4.43126 4.49113,-4.43126l48.50416,0c2.44038,0 4.49113,2.02341 4.49113,4.43126l0,47.85759c0,2.40785 -2.05074,4.43126 -4.49113,4.43126l-48.50416,0c-2.44038,0 -4.49113,-2.02341 -4.49113,-4.43126l0,-47.85759z" opacity="undefined" stroke-width="5" stroke="#ffa31a" fill="#ffa31a"/>
-  <text stroke-width="0.5" transform="matrix(1.63015, 0, 0, 2.1625, -14.8622, -44.6389)" font-weight="bold" xml:space="preserve" text-anchor="start" font-family="'Public Sans'" font-size="24" id="svg_2" y="44.26184" x="10.15588" stroke="#000000" fill="#ffffff">QN</text>
- </g>
-</svg>
