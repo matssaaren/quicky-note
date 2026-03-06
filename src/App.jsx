@@ -58,26 +58,6 @@ function App() {
     <div className="app">
       <header style={{ textAlign: 'center', margin: '1rem 0' }}>
         <span>Quicky Notes - Beta 1.0</span>
-        <div style={{ marginTop: '0.5rem' }}>
-          <span>Select Theme:</span>
-          <select
-            value={theme}
-            onChange={(e) => setTheme(e.target.value)}
-            style={{
-              background: 'black',
-              color: 'inherit',
-              border: '1px solid #555',
-              borderRadius: '0.3rem',
-              padding: '0.3rem 0.6rem',
-            }}
-          >
-            <option value="App">App</option>
-            <option value="Ass">Ass</option>
-            <option value="Hacker">Hacker</option>
-            <option value="Hacker2">Hacker2</option>
-            <option value="Orginal">Orginal</option>
-          </select>
-        </div>
       </header>
 
       <div className="main">
